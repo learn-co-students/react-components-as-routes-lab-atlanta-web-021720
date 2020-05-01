@@ -1,7 +1,8 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  NavLink
 } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import Home from '../components/Home';
@@ -14,6 +15,11 @@ const App = (props) => {
   return (
     <Router>
       {/*{code here}*/}
+      <NavBar />
+      <Route path="/" exact component={Home} />
+      <Route path="/movies" component={Movies} />
+      <Route path="/directors" component={Directors} />
+      <Route path="/actors" component={Actors} />
     </Router>
   );
 };
